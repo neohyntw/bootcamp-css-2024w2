@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+body{
+    font-family: "Bruno Ace SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+h2{
+    font-size: 64px;
+    text-align: left;
+    margin-bottom: 36px;
+}
+h1{
+    font-size: 128px;
+    color: #00FFA3;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.container{
+    max-width: 1296px;
+    margin: 0 auto;
+    @media (max-width:$screen-md) {
+        padding: 20px;
+    }
+}
+.bg-black{
+    background: #000;
+    color: white;
+    
+}
+
+.navbar ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 128px;
+        @media (max-width:$screen-md) {
+            flex-direction: column;
+        }
+        a{
+            color: white;
+        }
+        li{
+            max-width: 278.5px;
+        }
+}
+
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (max-width:$screen-md) {
+        flex-direction: column;
+    }
+    gap: 24px;
+    text-align: right;
+    padding: 72px 0 32px;
+    h2{
+        text-align: left;
+        margin-bottom: 0;
+    }
+    h1{
+        color: #00FFA3;
+    }
+}
+
+.btn{
+    background: white;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 32px;
+    .material-symbols-outlined{
+        vertical-align: middle;
+    }
+    @media (max-width:$screen-md) {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+}
+
+.bg-img{
+    background: url('../images/background-img.png') no-repeat;
+    background-size: cover;
+    color: white;
+    .container{
+        display: flex;
+        gap: 24px;
+        padding: 160px 0;
+        @media (max-width:$screen-md) {
+            padding:160px 20px;
+            flex-direction: column;
+        }
+    }
+    .intro-img{
+        max-width: 746px;
+        width: 100%;
+        display: flex;
+        gap: 24px;
+        @media (max-width:$screen-md) {
+           margin-left: -24px;
+           margin-right: -24px;
+           img{
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+.intro{
+    p{
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    hr{
+        display:block;
+        border:0px;
+        height:128px;
+        width: 98px;
+        background-image:url('../images/sparkle-sm.png');
+        background-repeat: repeat-x;
+        margin: 0;
+    }
+}
+
+.about-me{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 134px;
+    padding: 160px 0;
+    .content{
+        max-width: 526px;
+        width: 100%;
+        font-size: 24px;
+    }
+    @media (max-width:$screen-md) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.card{
+    max-width: 636px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (max-width:$screen-md) {
+        flex-direction: column;
+    }
+}
+
+.card-list{
+    width: calc(50% - 12px);
+    border: 1px solid #E3E3E3;
+    box-shadow: 4px 4px 4px #00000014;
+    padding: 16px;
+    h3{
+        font-size: 20px;
+    }
+    @media (max-width:$screen-md) {
+        width: 100%;
+    }
+}
+
+.contact-me{
+    background: linear-gradient(to top, #01021EE3 89%,#050014 100%,);
+    padding: 96px 0;
+    color: white;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:$screen-md) {
+            flex-direction: column;
+        }
+    }
+
+    h2{
+        margin-bottom: 0;
+        span{
+            font-size: 64px;
+        }
+        @media (max-width:$screen-md) {
+            text-align: center;
+            span{
+                transform: rotate(90deg);
+            }
+        }
+    }
+    .social-media{
+        display: flex;
+        gap: 20px;
+        li:hover img{
+            box-shadow: 0 0 16px 3px #9094FFE5;
+            border-radius: 40px;
+        }
+    }
+}
+
+.my-project{
+
+    padding: 160px 0;
+    @media (max-width:$screen-md) {
+        padding: 160px 20px;
+    }
+    h2{
+        max-width: 746px;
+        margin-left: auto;
+        @media (max-width:$screen-md) {
+            width: 100%;
+        }
+    }
+    
+}
+
+.project-board{
+    display: flex;
+    @media (max-width:$screen-md) {
+        flex-direction: column-reverse;
+    }
+    gap: 24px;
+    .top, .exp, .bottom{
+        display: flex;
+    }
+
+    .top{
+        margin-bottom: 28px;
+        gap: 24px;
+        @media (max-width:$screen-md) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .exp{
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 856px;
+        width: 100%;
+        
+    }
+
+    .btn{
+        background-color: #000;
+        color: white;
+        margin-top: auto;
+        @media (max-width:$screen-md) {
+            margin-top: 24px;
+        }
+    }
+    .bottom{
+        gap: 24px;
+        align-items: start;
+        @media (max-width:$screen-md) {
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer{
+    background: #000;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}

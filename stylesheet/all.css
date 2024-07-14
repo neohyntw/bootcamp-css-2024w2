@@ -1,0 +1,360 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 64px;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+h1 {
+  font-size: 128px;
+  color: #00FFA3;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+.bg-black {
+  background: #000;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 128px;
+}
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+}
+.navbar ul a {
+  color: white;
+}
+.navbar ul li {
+  max-width: 278.5px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 24px;
+  text-align: right;
+  padding: 72px 0 32px;
+}
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+}
+.banner h2 {
+  text-align: left;
+  margin-bottom: 0;
+}
+.banner h1 {
+  color: #00FFA3;
+}
+
+.btn {
+  background: white;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 32px;
+}
+.btn .material-symbols-outlined {
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+
+.bg-img {
+  background: url("../images/background-img.png") no-repeat;
+  background-size: cover;
+  color: white;
+}
+.bg-img .container {
+  display: flex;
+  gap: 24px;
+  padding: 160px 0;
+}
+@media (max-width: 768px) {
+  .bg-img .container {
+    padding: 160px 20px;
+    flex-direction: column;
+  }
+}
+.bg-img .intro-img {
+  max-width: 746px;
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .bg-img .intro-img {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .bg-img .intro-img img {
+    width: 100%;
+  }
+}
+
+.intro p {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+.intro hr {
+  display: block;
+  border: 0px;
+  height: 128px;
+  width: 98px;
+  background-image: url("../images/sparkle-sm.png");
+  background-repeat: repeat-x;
+  margin: 0;
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  gap: 134px;
+  padding: 160px 0;
+}
+.about-me .content {
+  max-width: 526px;
+  width: 100%;
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  max-width: 636px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+.card-list {
+  width: calc(50% - 12px);
+  border: 1px solid #E3E3E3;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.0784313725);
+  padding: 16px;
+}
+.card-list h3 {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .card-list {
+    width: 100%;
+  }
+}
+
+.contact-me {
+  background: linear-gradient(to top, rgba(1, 2, 30, 0.8901960784) 89%, #050014 100%);
+  padding: 96px 0;
+  color: white;
+}
+.contact-me .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .contact-me .container {
+    flex-direction: column;
+  }
+}
+.contact-me h2 {
+  margin-bottom: 0;
+}
+.contact-me h2 span {
+  font-size: 64px;
+}
+@media (max-width: 768px) {
+  .contact-me h2 {
+    text-align: center;
+  }
+  .contact-me h2 span {
+    transform: rotate(90deg);
+  }
+}
+.contact-me .social-media {
+  display: flex;
+  gap: 20px;
+}
+.contact-me .social-media li:hover img {
+  box-shadow: 0 0 16px 3px rgba(144, 148, 255, 0.8980392157);
+  border-radius: 40px;
+}
+
+.my-project {
+  padding: 160px 0;
+}
+@media (max-width: 768px) {
+  .my-project {
+    padding: 160px 20px;
+  }
+}
+.my-project h2 {
+  max-width: 746px;
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .my-project h2 {
+    width: 100%;
+  }
+}
+
+.project-board {
+  display: flex;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .project-board {
+    flex-direction: column-reverse;
+  }
+}
+.project-board .top, .project-board .exp, .project-board .bottom {
+  display: flex;
+}
+.project-board .top {
+  margin-bottom: 28px;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .project-board .top {
+    flex-direction: column-reverse;
+  }
+}
+.project-board .exp {
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 856px;
+  width: 100%;
+}
+.project-board .btn {
+  background-color: #000;
+  color: white;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .project-board .btn {
+    margin-top: 24px;
+  }
+}
+.project-board .bottom {
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .project-board .bottom {
+    flex-direction: column;
+  }
+  .project-board .bottom img {
+    width: 100%;
+  }
+}
+
+.footer {
+  background: #000;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}/*# sourceMappingURL=all.css.map */
